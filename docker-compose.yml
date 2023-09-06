@@ -1,0 +1,10 @@
+services:
+  website:
+    build: .
+    environment:
+      JEKYLL_ENV: 'production'
+    volumes:
+      - .:/srv/jekyll
+    ports:
+      - 35729:35729 # For jekyll serve --watch
+      - 4000:4000
